@@ -1,1 +1,1 @@
-# Aggregate-Federated-Learning
+# Decentralized-Federated-Learning (DFL)

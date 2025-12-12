@@ -1,0 +1,78 @@
+version: "3.9"
+services:
+  aggregator:
+    build:
+      context: .
+      dockerfile: aggregator.Dockerfile
+    container_name: fl_aggregator
+    ports:
+      - "9000:9000"
+    environment:
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - ipfs
+      - hardhat
+
+  client1:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    container_name: fl_client1
+    environment:
+      - CLIENT_ID=1
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - aggregator
+      - ipfs
+
+  client2:
+    build:
+      context: .
+      dockerfile: client.Dockerfile
+    container_name: fl_client2
+    environment:
+      - CLIENT_ID=2
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - aggregator
+      - ipfs
+
+  dashboard-backend:
+    build:
+      context: ../dashboard/backend
+      dockerfile: dashboard-backend.Dockerfile
+    container_name: dashboard_backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - aggregator
+      - ipfs
+      - hardhat
+
+  dashboard-frontend:
+    build:
+      context: ../dashboard/frontend
+      dockerfile: dashboard-frontend.Dockerfile
+    container_name: dashboard_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - dashboard-backend
+
+  ipfs:
+    build:
+      context: .
+      dockerfile: ipfs.Dockerfile
+    container_name: ipfs_node
+    ports:
+      - "5001:5001"
+      - "4001:4001"
+      - "8080:8080"
+
+  hardhat:
+    build:
+      context: .
+      dockerfile: hardhat.Dockerfile
+    container_name: hardhat_node
+    ports:
+      - "8545:8545"

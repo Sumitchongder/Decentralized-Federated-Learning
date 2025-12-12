@@ -8,6 +8,7 @@
   <img src="https://img.shields.io/badge/Blockchain-Integrated-green?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Privacy-Secure%20Aggregation-orange?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Python-3.10+-yellow?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-MIT-red?style=for-the-badge"/>
 </p>
 
 ---

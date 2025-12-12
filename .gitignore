@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_save
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# PyTest / coverage
+.cache/
+.coverage
+htmlcov/
+
+# Node (dashboard frontend)
+dashboard/frontend/node_modules/
+dashboard/frontend/.next/
+dashboard/frontend/dist/
+dashboard/frontend/build/
+
+# Environment configs
+*.env
+*.env.local
+
+# Docker
+docker/*.pid
+docker/.cache/
+docker/volumes/
+
+# Solidity / Hardhat / Brownie
+chain/artifacts/
+chain/cache/
+chain/build/
+
+# IPFS repo temp
+.ipfs/
+
+# Model files
+*.pth
+*.pt
+*.onnx
+
+# Dataset Cache
+datasets/cache/

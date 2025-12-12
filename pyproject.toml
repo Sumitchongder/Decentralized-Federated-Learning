@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=70.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "decentralized-federated-learning"
+version = "0.1.0"
+description = "A production-grade decentralized federated learning framework with blockchain, IPFS, secure aggregation, and P2P networking."
+readme = "README.md"
+authors = [
+    { name = "Sumit Chongder", email = "youremail@example.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = ["federated-learning", "decentralized", "blockchain", "ipfs", "p2p", "secure-aggregation"]
+
+dependencies = [
+    "torch>=2.0",
+    "torchvision>=0.15",
+    "fastapi",
+    "uvicorn",
+    "pydantic>=2.0",
+    "requests",
+    "web3>=6.0",
+    "ipfshttpclient>=0.8",
+    "cryptography",
+    "numpy",
+    "pandas",
+    "protobuf",
+    "scikit-learn",
+    "matplotlib",
+    "libp2p==0.1.7",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aggregator*", "client*", "networking*", "secure_agg*", "ipfs*", "chain*", "dashboard*", "datasets*", "models*"]
+

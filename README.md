@@ -203,7 +203,7 @@ This work is officially registered under the **Copyright Office, Government of I
   <img width="600" height="1400" alt="Image" src="https://github.com/user-attachments/assets/2940cd68-5871-4877-a4e7-08fcaaad3193" />
 </p>
 
-**Registration Number:** SW-192671/2024  
+**Registration Number:** SW-19267/2024  
 **Title:** DFL: Decentralized Federated Learning  
 **Author:** Sumit Chongder 
 
